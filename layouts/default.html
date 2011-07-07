@@ -1,0 +1,21 @@
+<%= render 'head' %>
+
+<div id="container">
+
+  <%= render 'header' %>
+
+  <div id="main" role="main">
+	<div id="left">
+	  <%= yield %>
+	</div>
+	<div id="right">
+	  <%= render 'right' %>
+	</div>
+  </div>
+
+</div>
+
+<%= render 'footer' %>
+
+<%= render 'scripts' %>
+</body>
