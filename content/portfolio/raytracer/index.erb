@@ -1,0 +1,14 @@
+---
+title: Monte Carlo (Stochastic) Ray Tracer
+year: 2010
+---
+
+<h1><%= @item[:title] %></h1>
+
+<% pics = get_images(@item, "large") %>
+
+<% pics.each do |item| %>
+
+   <p><%= item.path %></p>
+
+<% end %>

@@ -28,6 +28,9 @@ compile '*' do
   end
 end
 
+
+#### ROUTES ####
+
 route '/js/*' do
   item.identifier.chop + ".#{item[:extension]}"
 end
@@ -47,5 +50,7 @@ route '*' do
     item.identifier + 'index.html'
   end
 end
+
+### LAYOUTS ###
 
 layout '*', :erb

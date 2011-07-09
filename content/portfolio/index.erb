@@ -1,0 +1,15 @@
+---
+title: Portfolio
+---
+
+<% sort_portfolio(@item.children).each do |p_item| %>
+
+   <h1><%= p_item.first[:year] %></h1>
+
+   <% p_item.each do |item| %>
+
+   	  <h2><a href="<%= item.path %>"><%= item[:title] %></a></h2>
+
+   <% end %>	   
+
+<% end %>
