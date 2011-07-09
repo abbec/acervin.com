@@ -21,7 +21,24 @@ module Portfolio
   end
 
   def get_images(item, size)
-    images = @items.select { |i| i.identifier =~ %r{#{item.identifier}img/#{size}/[^/]+/$}}
+    
+    images = Array.new
+
+    small = @items.select { |i| i.identifier =~ %r{#{item.identifier}img/small/[^/]+/$}}
+    large = @items.select { |i| i.identifier =~ %r{#{item.identifier}img/large/[^/]+/$}}
+
+    small.each_with_index do |s, i|
+      h = Hash.new
+
+      h[:small] = s
+      s[:large] = large[i]
+
+      images.push(h)
+
+    end
+
+    images
+
   end
 
 end
