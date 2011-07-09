@@ -31,7 +31,7 @@ module Portfolio
       h = Hash.new
 
       h[:small] = s
-      s[:large] = large[i]
+      h[:large] = large[i]
 
       images.push(h)
 
