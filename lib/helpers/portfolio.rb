@@ -3,21 +3,29 @@ module Portfolio
   def sort_portfolio(items)
     items = items.sort{|x,y| 
       
+      error = false
+
       begin 
         y_year = Integer(y[:year])
       rescue ArgumentError
-        1
+        ret = 1
+        error = true
       end
 
 
       begin
         x_year = Integer(x[:year])
       rescue ArgumentError
-        -1
+        ret = -1
+        error = true
       end
-
-
-      y_year <=> x_year}
+      
+      if !error
+        y_year <=> x_year
+      else
+        ret
+      end
+    }
 
     year = -1
 
