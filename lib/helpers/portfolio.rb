@@ -1,7 +1,23 @@
 module Portfolio
 
   def sort_portfolio(items)
-    items = items.sort{|x,y| y[:year].to_i <=> x[:year].to_i}
+    items = items.sort{|x,y| 
+      
+      begin 
+        y_year = Integer(y[:year])
+      rescue ArgumentError
+        1
+      end
+
+
+      begin
+        x_year = Integer(x[:year])
+      rescue ArgumentError
+        -1
+      end
+
+
+      y_year <=> x_year}
 
     year = -1
 
@@ -20,7 +36,7 @@ module Portfolio
 
   end
 
-  def get_images(item, size)
+  def get_images(item)
     
     images = Array.new
 
