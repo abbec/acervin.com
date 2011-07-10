@@ -1,0 +1,16 @@
+<h2><a href="<%= @item.path %>"><%= @item[:title] %></a></h2>
+<p><%= @item[:created_at] %></p>
+<hr />
+
+<% if @embedded %>
+   <%= excerptize(@item.compiled_content, :length => 500) %>
+<% else %>
+   <%= yield %>
+<% end %>
+
+
+<% if @embedded %>
+   <p class="right"><a href="<%= @item.path %>">Read more/Comment</a></p>
+<% else %>
+   <%= render 'disqus', :item => @item %>
+<% end %>
