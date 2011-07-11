@@ -14,7 +14,7 @@
 compile '/blog/*/' do
   unless item.binary?
     filter :erb
-    filter :colorize_syntax, :colorizers => {:ruby => :pygmentize}
+    filter :colorize_syntax, :default_colorizer => :pygmentize
     filter :kramdown
     layout 'article'
     layout 'default'
