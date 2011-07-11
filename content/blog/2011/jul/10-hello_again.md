@@ -8,3 +8,9 @@ Hello hello.
 -------------
 
 Sune.
+
+<%= colorize_start "ruby" %>
+def test
+    foo
+end
+<%= colorize_end %>
