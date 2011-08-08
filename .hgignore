@@ -4,3 +4,4 @@ syntax: glob
 output/
 tmp/
 .sass-cache/
+Gemfile.lock

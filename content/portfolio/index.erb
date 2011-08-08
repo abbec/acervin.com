@@ -4,13 +4,18 @@ title: Portfolio
 
 <% sort_portfolio(@item.children).each do |p_item| %>
 
-   <h1><%= p_item.first[:year] %></h1>
+<h1><%= p_item.first[:year] %></h1>
 
-   <% p_item.each do |item| %>
+<% p_item.each do |item| %>
 
-   	  <h2><a href="<%= item.path %>"><%= item[:title] %></a></h2>
-	  <p><img src="<%= item.path + item[:image] %>" alt="<%= item[:title] %>" /></p>
+<h2><a href="<%= item.path %>"><%= item[:title] %></a></h2>
+<div class="clearfix">
+<div class="align_left">
+  <p><img src="<%= item.path + item[:image] %>" alt="<%= item[:title] %>" /></p>
+</div>
+<p><%= item[:summary] %></p>	 
 
-   <% end %>	   
+</div>
 
+<% end %>
 <% end %>

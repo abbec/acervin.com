@@ -1,0 +1,18 @@
+<h1><%= @item[:title] %></h1>
+
+<div>
+  <% pics = get_images(@item) %>	
+  <p>
+
+  <% pics.each_with_index do |p, i| %>	
+  
+  <% if i % 5 == 0 %>
+  </p><p>
+  <% end %>
+  
+  <a class="gallery" rel="<%= @item[:title].downcase.gsub(/[\s\.\(\)"]+/, '_') %>" href="<%= p[:large].path %>" ><img src="<%= p[:small].path %>" /></a>
+
+  <% end %>
+  </p>
+
+</div>

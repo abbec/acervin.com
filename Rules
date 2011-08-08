@@ -11,6 +11,14 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+require 'compass'
+Compass.add_project_configuration 'compass/config.rb' # when using Compass 0.10
+
+preprocess do
+  # authors may unpublish items by setting meta attribute publish: false
+  items.delete_if { |item| item[:publish] == false }
+end
+
 compile '/blog/*/' do
   unless item.binary?
     filter :erb
@@ -28,11 +36,20 @@ compile '/assets/css/_*/' do
 end
 
 compile '/assets/css/*/' do
-  filter :sass, :syntax => :scss
+  filter :sass, Compass.sass_engine_options
 end
 
 compile '/assets/*' do
   # don’t filter or layout
+end
+
+
+compile '/portfolio/*/' do
+  unless item.binary?
+    filter :kramdown
+    layout 'portfolio'
+    layout 'default'
+  end
 end
 
 compile '*' do
