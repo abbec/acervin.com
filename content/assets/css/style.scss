@@ -159,7 +159,7 @@ body, select, input, textarea {
 }
 
 /* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
-h1, h2, h3, h4, h5, h6 { font-weight: bold; margin: 10px 0; }
+h1, h2, h3, h4, h5, h6 { font-weight: bold; margin: 15px 0; }
 
 a, a:active, a:visited 
 { 
@@ -212,7 +212,7 @@ section
 
 header#main_header
 {
-	height : 176px;
+	height : 195px;
 	background-image: url('/img/header_bg.png');
 	background-repeat: repeat-x;
 }
@@ -376,6 +376,16 @@ div#footer_content
 
 		&:hover{ color: #435d7d; }
 	}
+}
+
+.center
+{
+	text-align: center;
+}
+
+.margin_left
+{
+	margin-left: 10%;
 }
 
 /**

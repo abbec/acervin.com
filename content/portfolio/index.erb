@@ -9,13 +9,11 @@ title: Portfolio
 <% p_item.each do |item| %>
 
 <h2><a href="<%= item.path %>"><%= item[:title] %></a></h2>
-<div class="clearfix">
-<div class="align_left">
-  <p><img src="<%= item.path + item[:image] %>" alt="<%= item[:title] %>" /></p>
-</div>
-<p><%= item[:summary] %></p>	 
-
-</div>
+<p class="margin_left">
+  <a href="<%= item.path %>">
+   	<img src="<%= item.path + item[:image] %>" alt="<%= item[:title] %>" />
+  </a>
+</p>	 
 
 <% end %>
 <% end %>
