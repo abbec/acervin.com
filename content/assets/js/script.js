@@ -19,7 +19,18 @@ $(function(){
 
 });
 
-
+$(document).ready(function() {
+	
+	$("a.gallery").fancybox({
+		'overlayColor'  :   '#aaaaaa',
+		'transitionIn'	:	'elastic',
+		'transitionOut'	:	'elastic',
+		'speedIn'		:	300, 
+		'speedOut'		:	300, 
+		'overlayShow'	:	true
+	});
+	
+});
 
 
 
