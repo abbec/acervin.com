@@ -5,7 +5,7 @@ created_at: 2011-09-08 19:20
 ---
 
 When developing drinkmixen we decided that we needed to have a
-javascript slider in for pagination (like the
+javascript slider for pagination (like the
 [GitHub tree slider](https://github.com/blog/760-the-tree-slider "GitHub Tree slider")).
 
 The difference is that our slider is used in pagination.
