@@ -21,9 +21,8 @@ end
 
 compile '/blog/*/' do
   unless item.binary?
-    filter :erb
-    filter :colorize_syntax, :default_colorizer => :pygmentize
     filter :kramdown
+    filter :colorize_syntax, :coderay => {:line_numbers => :table} #
     layout 'article'
     layout 'default'
   end
