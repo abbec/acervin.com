@@ -4,13 +4,15 @@ pre
   border: 1px solid #ccc;
   padding: .5em .5em;
   margin: 2em;
-  width: 95%;
+  width: 90%;
   border-radius: 5px;
   box-shadow: 1px 1px 5px #333;
+  font-size: 12px;
 
   pre
   {
 	  border: 0;
+	  margin: 0;
 	  box-shadow: none;
   }
 }
@@ -53,7 +55,6 @@ table.CodeRay td pre { padding: 0; border: 0; background: 0;}
 .CodeRay span.line-numbers { padding: 0px 4px; }
 .CodeRay .line { display: block; float: left; width: 100%; }
 .CodeRay .code { width: 100%; }
-.CodeRay .code pre { overflow: auto; }
 
 .CodeRay .debug { color: white !important; background: blue !important; }
 
