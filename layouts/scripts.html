@@ -17,11 +17,15 @@
       <script>DD_belatedPNG.fix("img, .png_bg"); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
 	  <![endif]-->
   
-
-  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
-  <script>
-    var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-    g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
-    s.parentNode.insertBefore(g,s)}(document,"script"));
-  </script>
+  <!-- Piwik --> 
+  <script type="text/javascript">
+	var pkBaseURL = (("https:" == document.location.protocol) ? "https://stats.acervin.com/" : "http://stats.acervin.com/");
+	document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+  </script><script type="text/javascript">
+	try {
+	var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+	piwikTracker.trackPageView();
+	piwikTracker.enableLinkTracking();
+	} catch( err ) {}
+  </script><noscript><p><img src="http://stats.acervin.com/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+  <!-- End Piwik Tracking Code -->

@@ -5,11 +5,19 @@ pre
   padding: .5em .5em;
   margin: 2em;
   width: 95%;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #333;
+
+  pre
+  {
+	  border: 0;
+	  box-shadow: none;
+  }
 }
 
-
-code {
-  font-family: "adaptive-mono-1","adaptive-mono-2", monospace;
+code 
+{
+  background-color: #F0F3F3;
 }
 
 span.highlight { white-space: pre; border: 0px; padding: 2px; }
