@@ -28,6 +28,12 @@ to make memory management more efficient and simple whereas the built in memory
 manager has to be everything to every application. This makes it
 inefficient and also too complicated in some cases.
 
+It also suffers in performance from the fact that is has to switch
+from user to kernel mode for each request. This can be avoided with
+custom memory management where a large block of memory can be
+allocated up front and memory request satisifed from this block. This
+means that no mode-switching occurs and we can avoid that bottleneck.
+
 ### Placement new
 
 To be able to write your own memory manager and control how data is
