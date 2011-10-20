@@ -230,8 +230,8 @@ div#header_inner
 {
 	width: 1000px;
 	margin: auto;
-	padding-top: 45px;
-	height: 131px;
+	padding: 45px 0 0 0;
+	height: 150px;
 	position: relative;
 	color: #fff;
 
@@ -243,7 +243,7 @@ div#header_inner
 		list-style-type: none;
 		float: right;
 		position: absolute;
-		bottom: 5px;
+		bottom: 30px;
 		right: 0;
 	}
 
@@ -296,11 +296,21 @@ div#main
 	margin: auto;
 	overflow: auto;
 	padding-bottom: 120px;
-}
 
-div#main div
-{
-	padding: 5px;
+	div
+	{
+		padding: 5px;
+	}
+
+	img
+	{
+		box-shadow: 1px 1px 5px #333;
+	}
+
+	img.thumb
+	{
+		box-shadow: none;
+	}
 }
 
 div#left
@@ -335,11 +345,6 @@ p
 div.box
 {
 	border-radius: 4px;
-	box-shadow: 1px 1px 5px #333;
-}
-
-div#main img
-{
 	box-shadow: 1px 1px 5px #333;
 }
 

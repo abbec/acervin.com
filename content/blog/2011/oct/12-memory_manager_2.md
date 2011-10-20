@@ -13,7 +13,7 @@ The need for allocating aligned memory often arises. 128 bit SIMD
 vectors for example has to be 16-bit aligned. That is the hexadecimal
 address has to end with the nibble 0x0. To account for that I will
 also discuss what is needed to extend the allocators to handle aligned
-memory alignment.
+memory allocation.
 
 ### A simple Allocator interface
 
@@ -22,7 +22,7 @@ allocators. The question arises whether to have the allocators as
 full-fledged classes with virtual functions and all that. In this case
 it is definately ok since you will probably not create a lot of memory
 allocators and memory management is an expensive operation anyway so
-the few extra bytes wont matter.
+the few extra virtual calls wont matter.
 
 The interface will look something like this
 
@@ -40,14 +40,17 @@ The interface will look something like this
 
     };
 
-With this interface ready we can start defining a concrete allocator.
+With this interface ready we can start defining a concrete
+allocator. The allocation method `allocate` will return a pointer to
+allocated memory where the object can then be placed with
+placement `new`.
 
 But wait, how do we actually obtain memory from the OS? The above
 interface suggest that we do not want to override global `new`. That
 is correct. It is much better if each allocator actually has a backing
 allocator that fetches raw memory directly from the OS in a
 system-dependent manner. This makes it possible to disallow the use of
-`new` and `malloc` globally by asserting.
+`new` and `malloc` globally by asserting (or something like it).
 
 ### The Stack Allocator
 
@@ -92,7 +95,7 @@ Now we can make an implementation of a stack allocator
 	
 	     uint32 allocated_size(void *p);
 
-		 uint32 get_free() { return _size - _allocated_size; }
+         uint32 get_free() { return _size - _allocated_size; }
 	     uint32 get_used() { return _allocated_size; }
 
 	     void clear();
@@ -158,11 +161,11 @@ To align the allocation we modify the method slightly
 			    uint32 aligned_address = 
 				     raw_address + adjustment;
 
-			    // Store the alignment 
-				// in the extra bytes allocated
-			    uint32 *p_adjustment = 
-				    (uint32*)(aligned_address-4);
-			    *p_adjustment = adjustment;
+			    // Store the alignment
+			    // in the extra byte allocated
+			    uint8 *p_adjustment = 
+				    (uint8*)(aligned_address-1);
+			    *p_adjustment = (uint8) adjustment;
 
 			    return (void*)aligned_address;
 		    }
@@ -188,8 +191,9 @@ This is the complete allocation method. The problem here is that the
 deallocation has to be done in two different ways depending on whether
 the allocation is aligned or not but that can be solved in a number of
 different ways, for example to have an unaligned version of both
-`allocate` and `deallocate`. However, all allocators should have the
-ability to allocate aligned memory.
+`allocate` and `deallocate`. The best way would be to store the alignment even when alignment is 1.
+This way the `deallocate` method can still know how to deallocate.
+Either way, all allocators should have the ability to allocate aligned memory.
 
 Worth to note in the above method is that the alignment of memory is
 stored in the extra bytes allocated.
