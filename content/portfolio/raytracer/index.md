@@ -25,13 +25,13 @@ is then saved to a .png.
 
 The project report is available <a href="https://github.com/downloads/abbec/flaXx/report.pdf">here</a>.
 
-## Techniques: ##
+## Techniques ##
 - C++
 - SDL
 - libpng
 - Monte Carlo Integration
 - Lighting calculations
 
-## Source Code: ##
+## Source Code ##
 The project is open source and the source code can be viewed on 
 <a href="https://github.com/abbec/flaXx" rel="external">GitHub</a>.
