@@ -44,3 +44,4 @@ Follow Me
    <img class="thumb" src="/about/img/facebook_32.png" alt="Facebook" />
 </a>
 </div>
+

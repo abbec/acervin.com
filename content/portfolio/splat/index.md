@@ -2,6 +2,8 @@
 title: SPLAT
 year: 2010
 image: splat.png
+points: 6
+group: 5
 ---
 
 Splat is a physics software for simulating deformable bodies. The simulation is done

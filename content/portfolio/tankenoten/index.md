@@ -2,6 +2,8 @@
 title: Tankenöten
 year: 2008
 image: tankenoten.png
+points: 3
+group: 3
 ---
 
 Tankenöten was developed in a university course called "Communication
@@ -10,6 +12,8 @@ learning to read and at the same time answers questions. It is
 designed in a way to be comforting to small children.
 
 Tankenöten is written in Java with the Swing framework.
+
+This was the first larger software that I wrote.
 
 ## Techniques ##
 - Java

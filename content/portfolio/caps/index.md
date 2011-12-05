@@ -2,6 +2,8 @@
 title: CAPS
 year: 2011
 image: caps.jpg
+points: 4.5
+group: 3
 ---
 
 CAPS is a project carried out in the course "Graphic Design and

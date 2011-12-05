@@ -2,6 +2,8 @@
 title: RoboHockey (AI Hockey)
 year: 2010
 image: aihockey.jpg
+points: 3
+group: 3
 ---
 
 RoboHockey is a very simple hockey game where two players play one on

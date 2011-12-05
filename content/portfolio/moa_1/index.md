@@ -2,6 +2,8 @@
 title: Modeling and Animation (Part 1)
 year: 2011
 image: moa1.png
+points: 3
+group: 2
 ---
 
 This is the first part of the course "Modeling And Animation" that

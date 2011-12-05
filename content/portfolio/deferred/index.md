@@ -2,6 +2,7 @@
 title: Deferred renderer
 year: 2011
 image: deferred.png
+points: 3
 ---
 
 This is a simple deferred renderer I developed to try out the

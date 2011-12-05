@@ -2,6 +2,8 @@
 title: Blockz
 year: 2011
 image: blockz.png
+points: 6
+group: 12
 ---
 
 Blockz is a 2D game developed in the university course "Agile

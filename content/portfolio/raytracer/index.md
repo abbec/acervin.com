@@ -2,6 +2,8 @@
 title: Monte Carlo (Stochastic) Ray Tracer
 year: 2011
 image: raytracer.png
+points: 6
+group: 2
 ---
 
 This is a project done in the university course TNCG15 - "Advanced Global Illumination and Rendering". 

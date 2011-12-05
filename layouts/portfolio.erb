@@ -1,4 +1,16 @@
 <h1><%= @item[:title] %></h1>
+<% if @item[:points] %>
+<hr />
+<p><b>Credits:</b> <%= @item[:points] %> ECTS Credits / <%= (@item[:points].to_i/1.5).round(1) %> work weeks.</p>
+<% end %>
+
+<% if @item[:group] %>
+<p><b>Group size:</b> <%= @item[:group] %> persons.</p>
+<% else %>
+<p>Individual project.</p>
+<% end %>
+
+<hr />
 
 <div>
   <% pics = get_images(@item) %>	
@@ -16,7 +28,6 @@
   </p>
 
   <%= yield %>
-
 
   <p class="right"><a href="/portfolio/">&lt;&lt; Back to portfolio</a></p>
 
