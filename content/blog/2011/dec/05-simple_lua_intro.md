@@ -14,14 +14,13 @@ will be larger.
 Lua is a scripting language implemented in pure ANSI C. It is
 extremely well implemented, lightweight, efficient and has one of the
 cleanest API:s that I have ever seen. Surely there are other scripting
-languages that can be agood alternative depending on the
+languages that can be a good alternative depending on the
 application. Python and Javascript are two other examples. However, my
 idea is to let this post be the first in a small series of posts
 demonstrating some bits of integrating Lua into your C/C++ projects.
 
 This series will NOT be an introduction to Lua as a language but
-rather its C API. For a reference of the language, refer to [](lua.org
-"http://lua.org").
+rather its C API. For a reference of the language, refer to [lua.org](http://lua.org).
 
 Worth to note is also that i am using the Lua 5.2 release candidate (rc5)
 and there can be some minor differences in the API.
@@ -113,6 +112,8 @@ If `luaL_dofile` succeeds, we can start executing the function.
         return 1;
 	}
 	
+	lua_close(L);
+	
 First we obtain the global function called "hello" that we created
 earlier. This puts this function on top of the stack. The function is
 then executed with `lua_pcall`. The parameters are in turn the Lua
@@ -120,6 +121,8 @@ state `L`, that we supply 0 arguments, expect 0 return values and
 that lua should use the standard error handler.
 
 For handling errors, we use the same scheme as with `luaL_dofile`.
+
+Before exiting we should also remember to close Lua with `lua_close(L)`.
 
 This is actually it. If you execute this, you should get `Hello Lua!`
 printed in the console.
