@@ -18,3 +18,5 @@ blog so be sure to check back to get an update on the progress.
 - DirectX
 - Lua C API
 - Win32 API
+- Cascaded Shadow Mapping
+- Custom Memory Management C++
