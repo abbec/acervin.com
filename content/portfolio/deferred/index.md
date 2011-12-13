@@ -18,3 +18,7 @@ The renderer is implemented in DirectX 10.
 - Deferred Shading
 - HLSL
 - DirectX 10
+
+## Source code
+The source code is available at <a
+href="https://bitbucket.org/abbec/deferred/" rel="external">bitbucket</a>.
