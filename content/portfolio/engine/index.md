@@ -20,3 +20,4 @@ blog so be sure to check back to get an update on the progress.
 - Win32 API
 - Cascaded Shadow Mapping
 - Custom Memory Management C++
+- Data oriented design
