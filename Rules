@@ -22,7 +22,7 @@ end
 compile '/blog/*/' do
   unless item.binary?
     filter :kramdown
-    filter :colorize_syntax, :coderay => {:line_numbers => :table} #
+    filter :colorize_syntax, :coderay => {:line_numbers => nil, :wrap => nil, :tab_width => 4} #
     layout 'article'
     layout 'default'
   end
