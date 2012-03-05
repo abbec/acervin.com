@@ -42,7 +42,7 @@ Our C function will be a simple add function. It is defined as
 
 Let's walk it through. The first thing we do is check that we got the correct number of arguments. This is done by a call to `lua_gettop(L)`. This function returns the current top of the Lua stack, i.e. the number of arguments provided to our function. If this number is not 2 we raise an error with `luaL_error()` and return 0 to say that we did not push any values onto the stack.
 
-If the argument count was correct we proceced to the row
+If the argument count was correct we proceed to the row
 
 	#!cplusplus
 	int a = luaL_checkinteger(L, 1) + luaL_checkinteger(L, 2);
