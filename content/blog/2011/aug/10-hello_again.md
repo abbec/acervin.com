@@ -2,6 +2,7 @@
 title: Hello World (again)
 kind: article
 created_at: 2011-08-10
+tags: ['general']
 ---
 
 Welcome to my new homepage where I will blog a lot more than I did on

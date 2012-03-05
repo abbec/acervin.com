@@ -2,6 +2,7 @@
 title: Why you should (or should you?) roll your own memory manager (Part 1)
 kind: article
 created_at: 2011-10-06 10:51
+tags: ['C++', 'memory management']
 ---
 
 ### Intro

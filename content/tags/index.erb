@@ -1,0 +1,17 @@
+---
+title: Tags
+---
+
+<h1>Tags</h1>
+
+<p>This is a list of blog posts for each tag.<p>
+
+<% tag_list.each do |tag| %>
+<a name="<%= tag %>"></a>
+<h2><%= tag %></h2>
+
+<% items_with_tag(tag).each do |item| %>
+<p><a href="<%= item.path %>"><%= item[:title] %></a></p>
+<% end %>
+
+<% end %>

@@ -2,6 +2,7 @@
 title: Adventures in the HTML5 history API
 kind: article
 created_at: 2011-09-08 19:20
+tags: ['web']
 ---
 
 When developing drinkmixen we decided that we needed to have a

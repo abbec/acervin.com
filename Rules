@@ -28,6 +28,12 @@ compile '/blog/*/' do
   end
 end
 
+compile '/tags/*' do
+  unless item.binary?
+    filter :erb
+    layout 'default'
+  end
+end
 
 compile '/assets/css/_*/' do  
   # don't output partials, so return nil

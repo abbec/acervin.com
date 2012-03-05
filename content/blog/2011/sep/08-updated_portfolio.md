@@ -2,6 +2,7 @@
 title: Updated portfolio
 kind: article
 created_at: 2011-09-08
+tags: ['general']
 ---
 
 I have updated my [portfolio](/portfolio "portfolio") to include some

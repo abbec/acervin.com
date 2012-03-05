@@ -3,6 +3,7 @@ title: Integrating Lua (Part 2)
 kind: article
 publish: true
 created_at: 2012-01-22
+tags: ['C++', 'Lua']
 ---
 
 ### Calling C functions

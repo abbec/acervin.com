@@ -1,8 +1,19 @@
 <article>
   <h2><a href="<%= @item.path %>"><%= @item[:title] %></a></h2>
   <p><%= @item[:created_at] %></p>
+  <% if @item[:tags] %>
+	<p>
+<% i = 1 %>
+<% @item[:tags].each do |tag| %>
+  <a href="/tags/#<%= tag %>">
+  <%= tag %><%= "," if i != @item[:tags].length %>
+  </a>
+	<% i+=1 %>
+  <% end %>
+  </p>
+  <% end %>
   <hr />
-
+	
   <% if @embedded %>
   <%= @item.compiled_content %>
   <% else %>

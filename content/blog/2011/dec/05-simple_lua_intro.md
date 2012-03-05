@@ -2,6 +2,7 @@
 title: A gentle introduction to integrating Lua
 kind: article
 created_at: 2011-12-05
+tags: ['C++', 'Lua']
 ---
 
 ### Introduction

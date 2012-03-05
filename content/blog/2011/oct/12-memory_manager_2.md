@@ -2,6 +2,7 @@
 title: How to roll your own memory management system - Part 2
 kind: article
 created_at: 2011-10-12 18:19
+tags: ['C++', 'memory management']
 ---
 
 ### Introduction
