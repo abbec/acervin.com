@@ -1,7 +1,6 @@
 source "http://rubygems.org"
 
 gem 'nanoc'
-gem 'nanoc3'
 gem 'kramdown'
 
 gem 'sass'
