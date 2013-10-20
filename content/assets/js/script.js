@@ -14,9 +14,6 @@ $(function(){
 			return false;
 		});
 
-
-	get_latest_tweets(10);
-
 });
 
 $(document).ready(function() {

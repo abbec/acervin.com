@@ -1,1 +1,6 @@
 .sass-cache/*
+Gemfile.lock
+*~
+output/*
+*.swp
+tmp/
