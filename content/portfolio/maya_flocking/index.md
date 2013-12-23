@@ -1,13 +1,13 @@
 ---
 title: Crowd plugin for Maya
-year: Current
+year: 2012
 image: ../shared/no_pic.png
 points: 3
 group: 3
 ---
 
-We are currently developing a crowd simulation plugin for Maya. It
-will feature an artist-friendly interface and Python scripting support.
+We developed a crowd simulation plugin for Maya. It
+features an artist-friendly interface and Python scripting support.
 
 ## Techniques ##
 - C++

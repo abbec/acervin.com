@@ -24,8 +24,7 @@ base_url: "http://acervin.com"
 deploy:
     public:
         kind: rsync
-        dst:  "abbe@ragingmoon.se:/srv/httpd/acervin"
-        options: ["-e \"ssh -p 2223\""]
+        dst:  "abbe@megatron:/srv/httpd/acervin"
 
 # The data sources where nanoc loads its data from. This is an array of
 # hashes; each array element represents a single data source. By default,
