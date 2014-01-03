@@ -4,3 +4,4 @@ Gemfile.lock
 output/*
 *.swp
 tmp/
+.bundle/
